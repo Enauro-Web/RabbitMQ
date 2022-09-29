@@ -86,7 +86,7 @@ namespace MQTTApp
         private void btnConnect_Click(object sender, EventArgs e)
         {
             client = new AMPQ();
-            client.Connection("localhost");
+            client.Connection(txtServerName.Text);
             client.CreateModelTopic("chat");
             string[] routingKeys = { "All", txtUser.Text };
 
